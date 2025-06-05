@@ -19,7 +19,6 @@
             </ul>
             
             <ul>
-                
                 <li><a href="#">Tareas</a></li>
                 <li><a href="#">Mi perfil</a></li>
                 <li><a href="#" role="button">Cerrar Sesión</a></li>
@@ -51,6 +50,40 @@
         </div>
         
     </main>
+
+    <!--el modal/dialog aparece frente al contenido-->
+    <dialog id="mdAgregar" open>
+        <article>
+             <header>
+                 <h3>Agregar a su BFFE</h3>
+             </header>
+ 
+             <form id="frmAgregar">
+                 <input type="text" id="txtNombre" placeholder="Nombre" required>
+                 <input type="text" id="txtApellido" placeholder="Apellido" required>
+                 <input type="text" id="txtEmail" placeholder="Correo Personal" required>
+ 
+                 <button type="submit" class="contrast">Guardar</button>
+             </form>
+      </article>
+     </dialog>
+
+    <!--el modal/dialog aparece frente al contenido-->
+    <dialog id="mdAgregar" >
+        <article>
+             <header>
+                 <h3>Agregar a su BFFE</h3>
+             </header>
+ 
+             <form id="frmAgregar">
+                 <input type="text" id="txtNombre" placeholder="Nombre" required>
+                 <input type="text" id="txtApellido" placeholder="Apellido" required>
+                 <input type="text" id="txtEmail" placeholder="Correo Personal" required>
+ 
+                 <button type="submit" class="contrast">Guardar</button>
+             </form>
+      </article>
+     </dialog>
 
     <!--Boton flotante para agregar registros-->
     <Button class="add-button">
