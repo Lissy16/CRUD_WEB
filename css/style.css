@@ -1,0 +1,38 @@
+.add-button{
+    position: fixed; /*el boton queda flotante encima del contenido*/
+    
+    bottom:30px; /*desde abajo*/
+    right: 40px;/* desde la derecha*/
+    background-color: pink;/* color de fondo del boton*/
+    color:black;/* color del icono*/
+    border-radius: 50%; /* hacemos color*/
+
+    width: 70px;
+    height: 70px;/*tamaño del boton para que sea cimetrico*/
+
+    border: none;/*quitar bordes por defecto*/
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);/*sombra del boton*/
+
+    display: flex;/*activamos el flexbox*/
+
+    justify-content: center;/*alineacion horizontal*/
+
+    align-items: center;/*alineacion vertical*/
+
+    z-index: 1001;/*para que el boton quede encima de todo*/
+
+    transition: transform 0.4s;/**duracion de la animacion*/
+}
+
+.add-button:hover{
+    transform: scale(2.2);
+}
+
+.tabla-scroll{
+    overflow: auto;
+}
+
+button{
+    margin: 1px;
+}
