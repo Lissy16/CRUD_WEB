@@ -52,42 +52,25 @@
     </main>
 
     <!--el modal/dialog aparece frente al contenido-->
-    <dialog id="mdAgregar" open>
-        <article>
-             <header>
-                 <h3>Agregar a su BFFE</h3>
-             </header>
- 
-             <form id="frmAgregar">
-                 <input type="text" id="txtNombre" placeholder="Nombre" required>
-                 <input type="text" id="txtApellido" placeholder="Apellido" required>
-                 <input type="text" id="txtEmail" placeholder="Correo Personal" required>
- 
-                 <button type="submit" class="contrast">Guardar</button>
-             </form>
-      </article>
-     </dialog>
-
-    <!--el modal/dialog aparece frente al contenido-->
     <dialog id="mdAgregar" >
         <article>
-             <header>
-              <a href="#" class="close" id="btnCerrar">Cerrar</a>
+            <header>
+                <a href="#" class="close" id="btnCerrar"></a>
                  <h3>Agregar a su BFFE</h3>
              </header>
  
-             <form id="frmAgregar">
-                 <input type="text" id="txtNombre" placeholder="Nombre" required>
-                 <input type="text" id="txtApellido" placeholder="Apellido" required>
-                 <input type="text" id="txtEmail" placeholder="Correo Personal" required>
+            <form id="frmAgregar">
+                <input type="text" id="txtNombre" placeholder="Nombre" required>
+                <input type="text" id="txtApellido" placeholder="Apellido" required>
+                <input type="email"  id="txtEmail" placeholder="Correo Electronico" required>
  
-                 <button type="submit" class="contrast">Guardar</button>
-             </form>
-      </article>
-     </dialog>
+                <button type="submit" class="contrast">Guardar</button>
+            </form>
+        </article>
+    </dialog>
 
     <!--Boton flotante para agregar registros-->
-    <Button class="add-button">
+    <Button class="add-button" id="btnAgregar" >
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
     </Button>
 

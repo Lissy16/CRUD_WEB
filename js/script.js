@@ -57,7 +57,44 @@ btnCerrar.addEventListener("click", ()=>{
     modal.close();
 })
 
-document.getElementById("frmAgregar").addEventListener("submit", async e =>{
-    e.preventDefault(); //e representa a submit evita que el formulario se envie de un solo
-    
+//Agregar nuevo integrante desde el formulario
+document.getElementById("frmAgregar").addEventListener("submit", async e => { //"e" representa a "submot". Evita que el formulario se envie un solo    
+ 
+    //Capturar los valores del formulario
+    const nombre = document.getElementById("txtNombre").value.trim();
+    const apellido = document.getElementById("txtApellido").value.trim();
+    const correo = document.getElementById("txtEmail").value.trim();
+ 
+    //Validacion basica
+    if(!nombre || !apellido || !correo)
+        {
+            alert("Ingresar los valores correctamente");
+            return;
+    }
+ 
+    const respuesta = await fetch(API_URL, {
+        method: "POST",//tipo de solicitud
+        headers: {'Content-Type': 'application/json'}, //tipo de datos enviado
+        body: JSON.stringify({nombre, apellido, correo})//datos enviados
+    });
+
+    //verificar si la api responde que los datos fueron enviados correctamente
+
+    if(respuesta.ok){
+        alert("El registro fue agregado correctamente");
+
+        //limpiar el formulario
+        document.getElementById("frmAgregar").reset();
+
+        //cerrar el modal
+        modal.close();
+
+        //recargar tabla 
+        ObetenerIntegrantes();
+    }
+    else{
+        //en caso de que la api devuelva el codigo diferente a 200-299
+        alert("El registro no fue agregado ponlo biennnn!!!!!!!");
+    }
+
 });
